@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 5</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<nav><img id="logo" src="imagenes/logo.svg" alt=""><a href="index.html" class="activo">HOME</a> <a href="contacto.html">CONTACTO</a></nav>
+
+<div>
+<h2>¿Querés que nos contactemos con vos?</h2>
+<form action="codigo.php" method="post">
+<p>Dejanos tu consulta:</p>
+<label for="nombre">Nombre completo <span>*</span></label>
+<input type="text" id="nombre" >
+<label for="email">Email <span>*</span></label>
+<input type="email" id="email" >
+<label for="comentario">Comentario<span>*</span></label>
+<textarea name="comentario" id="comentario"></textarea>
+
+
+<input  class="botones" id="reset" value="Resetear" type="reset"><input class="botones" value="Enviar" id="enviar" type="submit">
+</form>
+
+
+
+
+</div>
+
+
+    
+</body>
+</html>
