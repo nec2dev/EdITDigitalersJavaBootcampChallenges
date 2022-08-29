@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    height: 50px;
+    background-color: lightblue;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+main{
+    padding: 5px 40px;
+}
+footer{
+    background-color: #000;
+    color: #fff;
+    padding: 0 0 0 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}

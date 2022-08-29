@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Saludo con JSP</title>
+</h:head>
+<h:body>
+	<h1>Mi página JSP</h1>
+#{saludoBean.mensaje}
+<h2>Formulario</h2>
+	<h:form>
+		<h:outputLabel value="Nombre " for="nombre" />
+		<h:inputText value="#{personaBean.nombre}" id="nombre" />
+		<h:outputLabel value="Edad " for="edad" />
+		<h:inputText value="#{personaBean.edad}" id="edad" />
+		<br></br>
+		<h:outputLabel value="Direccion " for="direccion" />
+		<h:inputText value="#{personaBean.direccion}" id="direccion" />
+		<h:outputLabel value="Género " for="genero" />
+		<h:selectOneMenu value="#{personaBean.genero}" id="genero">
+			<f:selectItem itemValue="masculino" itemLabel="masculino" />
+			<f:selectItem itemValue="femenino" itemLabel="femenino" />
+		</h:selectOneMenu>
+		<br></br>
+		<h:outputLabel value="Profesión " for="profesion" />
+		<h:selectManyListbox value="#{personaBean.profesionSeleccionada}"
+			id="profesion">
+			<f:selectItems value="#{personabean.profesionList}" />
+		</h:selectManyListbox>
+		<hr></hr>
+		<h:commandButton action="datos" value="Enviar datos"
+			style="width:350px" />
+
+	</h:form>
+</h:body>
+</html>

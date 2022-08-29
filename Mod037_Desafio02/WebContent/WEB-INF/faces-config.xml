@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+	<managed-bean>
+		<managed-bean-name>holaBean</managed-bean-name>
+		<managed-bean-class>ar.com.educacionit.holajsf.beans.HolaBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>saludo</from-outcome>
+			<to-view-id>/saludo.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<managed-bean>
+		<managed-bean-name>personaBean</managed-bean-name>
+		<managed-bean-class>ar.com.educacionit.holajsf.beans.PersonaBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>hola.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>insertaPersona</from-outcome>
+			<to-view-id>/chau.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>Registro de formulario</title>
+</h:head>
+<h:body>
+	<h1>Bienvenido #{personaBean.nombre}</h1>
+	<hr></hr>
+	<h:form>
+		<h:panelGrid columns="2" border="2">
+			<h:outputLabel value="Nombre " for="nombre" />
+			<h:outputText value="#{personaBean.nombre}" id="nombre" />
+			<h:outputLabel value="Edad " for="edad" />
+			<h:outputText value="#{personaBean.edad}" id="edad" />
+			<h:outputLabel value="Direccion " for="direccion" />
+			<h:inputTextarea value="#{personaBean.direccion}" id="direccion" />
+			<h:outputLabel value="Género " for="genero" />
+			<h:outputText value="#{personaBean.genero}" id="genero" />
+			<h:outputLabel value="Profesión " for="profesion" />
+			<h:panelGroup>
+				<ul>
+					<ui:repeat var="prof" value="#{personaBean.personaSeleccionada}">
+						<li>#{prof}</li>
+					</ui:repeat>
+				</ul>
+			</h:panelGroup>
+			<br></br>
+
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

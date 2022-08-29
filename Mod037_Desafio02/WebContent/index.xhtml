@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>JSF</title>
+</h:head>
+<h:body>
+	<h3>JSF</h3>
+	<h:form>
+    	   Nombre: <h:inputText value="#{holaBean.nombre}" required="true"
+			id="nombre" requiredMessage="no puede dejar el campo nombre en blanco"></h:inputText>
+    	   Edad: <h:inputText value="#{holaBean.edad}" required="true"
+			id="edad" requiredMessage="edad es necesaria">
+			
+		</h:inputText>
+		<h:commandButton value="Bienvenido" action="saludo"></h:commandButton>
+		<br></br>
+		<h:message for="nombre" style="color:blue"></h:message>
+		<br></br>
+		<h:message for="edad" style="color:red"></h:message>
+	</h:form>
+</h:body>
+</html>
+
+
